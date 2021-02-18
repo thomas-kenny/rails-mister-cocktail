@@ -1,11 +1,7 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <a class="navbar-brand" href="#">
-    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" />
-</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
+  <div class="navbar-brand" href="#">
+    <%= image_tag "cocktail_logo.jpg", alt: "logo" %>
+  </div>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
@@ -18,7 +14,7 @@
     </ul>
   </div>
 </div>
-
+<h1>Cocktails</h1>
 <div class="container cocktails-container">
   <% @cocktails.each do |cocktail| %>
     <div class="card cocktails-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(#)">
