@@ -1,0 +1,50 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <a class="navbar-brand" href="#">
+    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" />
+</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+       <%= link_to 'Cocktails', cocktails_path %>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(#);">
+  <div class="container container-banner">
+    <h1><%= @cocktail.name %></h1>
+  </div>
+</div>
+
+<div class="container show-container">
+  <div class="card card-ingredients">
+    <img src="#" />
+    <div class="card-product-infos">
+      <h2>Ingredients</h2>
+      <ul style="list-style: none;">
+        <% @cocktail.doses.each do |dose| %>
+        <li> <%= dose.description %> <%= dose.ingredient.name %> <%= link_to 'x', dose_path(dose), method: :delete, data: { confirm: "Delete dose?" } %> </li>
+
+        <% end %>
+      </ul>
+    </div>
+    <div class="form">
+      <%= simple_form_for [@cocktail, @dose] do |f| %>
+      <%= f.input :description %>
+      <%= f.association :ingredient %>
+      <%= f.submit "Add", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+
+</div>
+
+
+
+
