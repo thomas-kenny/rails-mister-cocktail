@@ -2,12 +2,13 @@
   <div class="navbar-brand" href="#">
     <%= image_tag "cocktail_logo.jpg", alt: "logo" %>
   </div>
-
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+ <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-       <%= link_to 'Cocktails', cocktails_path %>
+      <li class="btn btn-success">
+        <%= link_to 'Cocktails', cocktails_path %>
+      </li>
+      <li class="btn btn-info">
+        <%= link_to 'Add a cocktail', new_cocktail_path %>
       </li>
     </ul>
   </div>
@@ -35,7 +36,7 @@
       <%= simple_form_for [@cocktail, @dose] do |f| %>
       <%= f.input :description %>
       <%= f.association :ingredient %>
-      <%= f.submit "Add", class: "btn btn-primary" %>
+      <%= f.submit "Add dose", class: "btn btn-primary" %>
       <% end %>
     </div>
   </div>

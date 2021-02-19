@@ -5,16 +5,19 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
+      <li class="btn btn-success">
         <%= link_to 'Cocktails', cocktails_path %>
       </li>
-      <li class="nav-item">
+      <li class="btn btn-info">
         <%= link_to 'Add a cocktail', new_cocktail_path %>
       </li>
     </ul>
   </div>
 </div>
-<h1>Cocktails</h1>
+<div class="header">
+  <h1>Cocktails</h1>
+</div>
+<br>
 <div class="container cocktails-container">
   <% @cocktails.each do |cocktail| %>
     <div class="card cocktails-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(#)">
