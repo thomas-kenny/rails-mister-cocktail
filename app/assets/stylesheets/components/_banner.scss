@@ -1,0 +1,40 @@
+.cocktail-banner {
+  background-image: asset-url('home_banner.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+  width: 800px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  }
+
+.show-banner {
+  background-image: asset-url('show_page_banner.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  width: 600px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+
+.create-banner {
+  background-image: asset-url('create_banner.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  width: 600px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+}
